@@ -1,17 +1,15 @@
 # Trip Calendar
 
-[![build](https://github.com/sergetfep/trip-calendar/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/sergetfep/trip-calendar/actions/workflows/deploy.yml)
-
 GitHub Pages: https://sergetfep.github.io/trip-calendar/
 
 ## Что сделано
 
 - Виджет выбора дат **туда / обратно** (переключатель туда-обратно)
-- Дата **"туда" не раньше сегодняшней** (по времени браузера)
+- Дата **"туда"** не раньше сегодняшней (по времени браузера)
 - **Сегодня** подсвечено
-- Даты **до сегодняшней** недоступны
+- Даты до сегодняшней недоступны
 - Переключение месяца (prev/next)
-- Дата **"обратно" не ранее даты "туда"**
+- Дата **"обратно"** не ранее даты **"туда"**
 - Для расчёта дат используется **moment**
 - Автотесты: чистая логика + DOM (JSDOM)
 
