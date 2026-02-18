@@ -70,11 +70,17 @@ export default class TripCalendarWidget {
   }
 
   onDocClick(e) {
-    const clickedInside =
-      this.calendarEl.contains(e.target) ||
-      this.departInput.contains(e.target) ||
-      this.returnInput.contains(e.target) ||
-      this.roundtripToggle.contains(e.target);
+    const path = typeof e.composedPath === "function" ? e.composedPath() : null;
+
+    const clickedInside = path
+      ? path.includes(this.calendarEl) ||
+        path.includes(this.departInput) ||
+        path.includes(this.returnInput) ||
+        path.includes(this.roundtripToggle)
+      : this.calendarEl.contains(e.target) ||
+        this.departInput.contains(e.target) ||
+        this.returnInput.contains(e.target) ||
+        this.roundtripToggle.contains(e.target);
 
     if (!clickedInside && this.isOpen()) {
       this.close();
@@ -106,6 +112,9 @@ export default class TripCalendarWidget {
   }
 
   onCalendarClick(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
     const { action } = e.target.dataset;
     if (action === "prev") {
       this.model.prevMonth();
