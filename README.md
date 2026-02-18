@@ -1,6 +1,6 @@
 # Trip Calendar
 
-![Build](https://github.com/sergetfep/trip-calendar/actions/workflows/deploy.yml/badge.svg)
+![Build](https://github.com/sergetfep/trip-calendar/actions/workflows/deploy.yml/badge.svg?branch=main)
 
 GitHub Pages: https://sergetfep.github.io/trip-calendar/
 

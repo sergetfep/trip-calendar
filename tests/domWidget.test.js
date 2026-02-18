@@ -71,7 +71,6 @@ describe("TripCalendarWidget DOM", () => {
       today: moment("2026-02-17"),
     });
 
-    // pick depart then return
     els.departInput.click();
     els.calendarEl.querySelector('[data-date="2026-02-20"]').click();
     els.returnInput.click();
